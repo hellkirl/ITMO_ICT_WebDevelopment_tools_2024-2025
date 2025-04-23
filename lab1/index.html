@@ -1,0 +1,781 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Лабораторная работа №1 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа №1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Главная
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ссылки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Описание
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Методы API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Методы API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пользователи (Users)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Поездки (Trips)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#companions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Попутчики (Companions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itineraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Маршруты (Itineraries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сообщения (Messages)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модели
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ссылки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Описание
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Методы API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Методы API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пользователи (Users)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Поездки (Trips)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#companions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Попутчики (Companions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itineraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Маршруты (Itineraries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сообщения (Messages)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модели
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="no1">Лабораторная работа №1</h1>
+<h2 id="_1">Ссылки</h2>
+<ul>
+<li><a href="https://github.com/hellkirl/ITMO_ICT_WebDevelopment_tools_2024-2025/tree/lr1">ЛР1</a></li>
+<li><a href="https://rendex85.github.io/WebDevelopmentLabsDocs/lr2/lr2/">Задание</a></li>
+</ul>
+<h2 id="_2">Описание</h2>
+<p>Работа представляет API, написанное с использованием <strong>FastAPI</strong>, по теме "Разработка веб-приложения для поиска партнеров в путешествие". Используемая СУБД: <strong>PostgreSQL</strong>.</p>
+<h2 id="api">Методы API</h2>
+<h3 id="users">Пользователи (Users)</h3>
+<ul>
+<li>
+<p><strong>GET</strong> <code>/users/</code><br />
+<em>Описание:</em> Получение списка пользователей.<br />
+<em>Параметры:</em> Нет.</p>
+</li>
+<li>
+<p><strong>GET</strong> <code>/users/me</code><br />
+<em>Описание:</em> Получение данных текущего пользователя.<br />
+<em>Параметры:</em> Нет.</p>
+</li>
+<li>
+<p><strong>GET</strong> <code>/users/{user_id}</code><br />
+<em>Описание:</em> Получение данных конкретного пользователя по его идентификатору.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>user_id</code> (path, integer): Идентификатор пользователя.</p>
+</li>
+<li>
+<p><strong>PUT</strong> <code>/users/{user_id}</code><br />
+<em>Описание:</em> Обновление данных пользователя.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>user_id</code> (path, integer): Идентификатор пользователя.<br />
+<em>Тело запроса:</em> AccountUpdate (JSON).</p>
+</li>
+<li>
+<p><strong>DELETE</strong> <code>/users/{user_id}</code><br />
+<em>Описание:</em> Удаление пользователя.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>user_id</code> (path, integer): Идентификатор пользователя.</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/users/new</code><br />
+<em>Описание:</em> Создание нового пользователя.<br />
+<em>Тело запроса:</em> Account (JSON).</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/users/login</code><br />
+<em>Описание:</em> Авторизация пользователя.<br />
+<em>Параметры (Query):</em>  </p>
+</li>
+<li><code>username</code> (string): Имя пользователя.  </li>
+<li>
+<p><code>password</code> (string): Пароль.</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/users/register</code><br />
+<em>Описание:</em> Регистрация нового пользователя.<br />
+<em>Тело запроса:</em> Account (JSON).</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/users/change-password</code><br />
+<em>Описание:</em> Изменение пароля пользователя.<br />
+<em>Тело запроса:</em> PasswordChange (JSON).</p>
+</li>
+</ul>
+<h3 id="trips">Поездки (Trips)</h3>
+<ul>
+<li>
+<p><strong>GET</strong> <code>/trips/</code><br />
+<em>Описание:</em> Получение списка поездок.<br />
+<em>Параметры:</em> Нет.</p>
+</li>
+<li>
+<p><strong>GET</strong> <code>/trips/{trip_id}</code><br />
+<em>Описание:</em> Получение данных поездки по её идентификатору.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>trip_id</code> (path, integer): Идентификатор поездки.</p>
+</li>
+<li>
+<p><strong>PUT</strong> <code>/trips/{trip_id}</code><br />
+<em>Описание:</em> Обновление данных поездки.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>trip_id</code> (path, integer): Идентификатор поездки.<br />
+<em>Тело запроса:</em> Trip (JSON).</p>
+</li>
+<li>
+<p><strong>DELETE</strong> <code>/trips/{trip_id}</code><br />
+<em>Описание:</em> Удаление поездки.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>trip_id</code> (path, integer): Идентификатор поездки.</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/trips/new</code><br />
+<em>Описание:</em> Создание новой поездки.<br />
+<em>Тело запроса:</em> Trip (JSON).</p>
+</li>
+</ul>
+<h3 id="companions">Попутчики (Companions)</h3>
+<ul>
+<li><strong>GET</strong> <code>/companions/</code><br />
+<em>Описание:</em> Получение списка попутчиков для заданной поездки.<br />
+<em>Параметры (Query):</em>  </li>
+<li>
+<p><code>trip_id</code> (integer): Идентификатор поездки.</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/companions/</code><br />
+<em>Описание:</em> Создание нового попутчика.<br />
+<em>Тело запроса:</em> Companion (JSON).</p>
+</li>
+<li>
+<p><strong>PUT</strong> <code>/companions/{companion_id}</code><br />
+<em>Описание:</em> Обновление данных попутчика.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li>
+<p><code>companion_id</code> (path, integer): Идентификатор попутчика.<br />
+<em>Тело запроса:</em> Companion (JSON).</p>
+</li>
+<li>
+<p><strong>DELETE</strong> <code>/companions/{companion_id}</code><br />
+<em>Описание:</em> Удаление попутчика.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li><code>companion_id</code> (path, integer): Идентификатор попутчика.</li>
+</ul>
+<h3 id="itineraries">Маршруты (Itineraries)</h3>
+<ul>
+<li><strong>GET</strong> <code>/itineraries/{trip_id}</code><br />
+<em>Описание:</em> Получение списка маршрутов для заданной поездки.<br />
+<em>Параметры:</em>  </li>
+<li>
+<p><code>trip_id</code> (path, integer): Идентификатор поездки.</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/itineraries/</code><br />
+<em>Описание:</em> Создание нового маршрута.<br />
+<em>Тело запроса:</em> Itinerary (JSON).</p>
+</li>
+<li>
+<p><strong>DELETE</strong> <code>/itineraries/{trip_id}/{itinerary_id}</code><br />
+<em>Описание:</em> Удаление маршрута.<br />
+<em>Параметры:</em>  </p>
+</li>
+<li><code>trip_id</code> (path, integer): Идентификатор поездки.  </li>
+<li><code>itinerary_id</code> (path, integer): Идентификатор маршрута.</li>
+</ul>
+<h3 id="messages">Сообщения (Messages)</h3>
+<ul>
+<li><strong>GET</strong> <code>/messages/{trip_id}</code><br />
+<em>Описание:</em> Получение списка сообщений для заданной поездки.<br />
+<em>Параметры:</em>  </li>
+<li>
+<p><code>trip_id</code> (path, integer): Идентификатор поездки.</p>
+</li>
+<li>
+<p><strong>POST</strong> <code>/messages/</code><br />
+<em>Описание:</em> Создание нового сообщения для поездки.<br />
+<em>Тело запроса:</em> Message (JSON).</p>
+</li>
+</ul>
+<h2 id="_3">Модели</h2>
+<pre><code class="language-python">from enum import Enum
+import datetime
+from typing import Optional, List
+
+from pydantic import BaseModel, EmailStr
+from sqlmodel import SQLModel, Field, Relationship
+
+
+class TripStatus(str, Enum):
+    planned = &quot;planned&quot;
+    in_progress = &quot;in_progress&quot;
+    completed = &quot;completed&quot;
+    canceled = &quot;canceled&quot;
+
+
+class VehicleType(str, Enum):
+    car = &quot;car&quot;
+    motorcycle = &quot;motorcycle&quot;
+    bicycle = &quot;bicycle&quot;
+    scooter = &quot;scooter&quot;
+    train = &quot;train&quot;
+    bus = &quot;bus&quot;
+    plane = &quot;plane&quot;
+    boat = &quot;boat&quot;
+    walking = &quot;walking&quot;
+
+
+class CompanionStatus(str, Enum):
+    confirmed = &quot;confirmed&quot;
+    pending = &quot;pending&quot;
+    declined = &quot;declined&quot;
+    canceled = &quot;canceled&quot;
+
+
+class AccountType(str, Enum):
+    user = &quot;user&quot;
+    admin = &quot;admin&quot;
+
+
+class Account(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    username: str
+    first_name: str
+    last_name: str
+    email: EmailStr
+    password: Optional[str] = Field(default=None, sa_column_kwargs={&quot;nullable&quot;: True})
+    description: Optional[str] = Field(default=None)
+    created_at: datetime.datetime = Field(
+        default_factory=datetime.datetime.utcnow, nullable=False
+    )
+    trips: List[&quot;Trip&quot;] = Relationship(back_populates=&quot;initiator&quot;)
+    role: AccountType = Field(default=AccountType.user)
+
+
+class AccountUpdate(BaseModel):
+    first_name: Optional[str]
+    last_name: Optional[str]
+    email: Optional[EmailStr]
+    description: Optional[str]
+
+
+class Trip(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    initiator_id: Optional[int] = Field(default=None, foreign_key=&quot;account.id&quot;)
+    start_date: Optional[datetime.datetime] = None
+    end_date: Optional[datetime.datetime] = None
+    vehicle: Optional[VehicleType] = None
+    description: Optional[str] = None
+    created_at: Optional[datetime.datetime] = None
+    status: Optional[TripStatus] = None
+
+    initiator: Optional[Account] = Relationship(back_populates=&quot;trips&quot;)
+    companions: List[&quot;Companion&quot;] = Relationship(back_populates=&quot;trip&quot;)
+    messages: List[&quot;Message&quot;] = Relationship(back_populates=&quot;trip&quot;)
+    itineraries: List[&quot;Itinerary&quot;] = Relationship(back_populates=&quot;trip&quot;)
+
+
+class Companion(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    trip_id: int = Field(foreign_key=&quot;trip.id&quot;)
+    companion_id: int = Field(foreign_key=&quot;account.id&quot;)
+    status: CompanionStatus
+    created_at: datetime.datetime
+
+    trip: Trip = Relationship(back_populates=&quot;companions&quot;)
+    companion: Account = Relationship()
+
+
+class Message(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    trip_id: int = Field(foreign_key=&quot;trip.id&quot;)
+    sender_id: int = Field(foreign_key=&quot;account.id&quot;)
+    message: str
+    created_at: datetime.datetime
+
+    trip: Trip = Relationship(back_populates=&quot;messages&quot;)
+    sender: Account = Relationship()
+
+
+class Itinerary(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    trip_id: int = Field(foreign_key=&quot;trip.id&quot;)
+    stop_number: int
+    location: str
+    arrival_date: Optional[datetime.datetime] = None
+    departure_date: Optional[datetime.datetime] = None
+    created_at: datetime.datetime
+
+    trip: Trip = Relationship(back_populates=&quot;itineraries&quot;)
+</code></pre>
+<p><img alt="alt text" src="../db_model_lab1.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
