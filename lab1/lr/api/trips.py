@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials
 from middleware.user import get_initiator_permission
 from sqlmodel import Session
-from auth.utils import auth_scheme
+from auth.utils import auth_scheme, decode_access_token
 
 from db.connection import get_session
 from services.trips_service import (
@@ -43,8 +43,9 @@ async def create_new_trip(
     session: Session = Depends(get_session),
     token: HTTPAuthorizationCredentials = Depends(auth_scheme),
 ):
+    user_id_credentials = decode_access_token(token.credentials)
+    trip.initiator_id = user_id_credentials.get("user_id")
     return create_trip(session, trip)
-
 
 @router.put("/{trip_id}", response_model=Trip)
 async def update_existing_trip(

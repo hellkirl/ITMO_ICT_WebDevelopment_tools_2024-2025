@@ -4,6 +4,7 @@ from typing import Optional, List
 
 from pydantic import BaseModel, EmailStr
 from sqlmodel import SQLModel, Field, Relationship
+from sqlmodel import Field
 
 
 class TripStatus(str, Enum):
@@ -67,7 +68,7 @@ class Trip(SQLModel, table=True):
     vehicle: Optional[VehicleType] = None
     description: Optional[str] = None
     created_at: Optional[datetime.datetime] = None
-    status: Optional[TripStatus] = None
+    status: TripStatus = Field(default=TripStatus.planned)
 
     initiator: Optional[Account] = Relationship(back_populates="trips")
     companions: List["Companion"] = Relationship(back_populates="trip")

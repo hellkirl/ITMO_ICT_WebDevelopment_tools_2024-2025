@@ -3,8 +3,8 @@ from sqlmodel import Session, select
 from db.connection import get_session
 from services.messages_service import get_messages, create_message
 from models.models import Message
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from auth.utils import auth_scheme
+from fastapi.security import HTTPAuthorizationCredentials
+from auth.utils import auth_scheme, decode_access_token
 from middleware.user import get_message_permission
 
 router = APIRouter(tags=["Messages"], prefix="/messages")
@@ -28,6 +28,9 @@ async def create_trip_message(
     session: Session = Depends(get_session),
     token: HTTPAuthorizationCredentials = Depends(auth_scheme),
 ) -> Message:
+    user_id_credentials = decode_access_token(token.credentials)
+    sender_id = user_id_credentials.get("user_id")
+    message.sender_id = sender_id
     get_message_permission(message.trip_id, token=token, session=session)
     created_message = create_message(session, message)
     if not created_message:
