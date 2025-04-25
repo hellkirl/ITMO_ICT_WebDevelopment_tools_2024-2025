@@ -1,3 +1,4 @@
+import datetime
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials
 from middleware.user import get_initiator_permission
@@ -6,32 +7,32 @@ from auth.utils import auth_scheme, decode_access_token
 
 from db.connection import get_session
 from services.trips_service import (
-    get_trips,
-    get_trip,
+    get_trip_with_companions,
     create_trip,
+    get_trips_with_companions,
     update_trip,
     delete_trip,
 )
-from models.models import Trip
+from models.models import Trip, TripWithCompanions
 
 router = APIRouter(tags=["Trips"], prefix="/trips")
 
 
-@router.get("/", response_model=list[Trip])
+@router.get("/", response_model=list[TripWithCompanions])
 async def list_trips(
     session: Session = Depends(get_session),
     token: HTTPAuthorizationCredentials = Depends(auth_scheme),
 ):
-    return get_trips(session)
+    return get_trips_with_companions(session)
 
 
-@router.get("/{trip_id}", response_model=Trip)
+@router.get("/{trip_id}", response_model=TripWithCompanions)
 async def get_trip_by_id(
     trip_id: int,
     session: Session = Depends(get_session),
     token: HTTPAuthorizationCredentials = Depends(auth_scheme),
 ):
-    trip = get_trip(session, trip_id)
+    trip = get_trip_with_companions(session, trip_id)
     if not trip:
         raise HTTPException(status_code=404, detail="Trip not found")
     return trip
@@ -45,6 +46,7 @@ async def create_new_trip(
 ):
     user_id_credentials = decode_access_token(token.credentials)
     trip.initiator_id = user_id_credentials.get("user_id")
+    trip.created_at = trip.updated_at = datetime.now()
     return create_trip(session, trip)
 
 @router.put("/{trip_id}", response_model=Trip)

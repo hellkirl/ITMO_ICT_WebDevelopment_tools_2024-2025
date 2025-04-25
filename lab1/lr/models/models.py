@@ -69,7 +69,7 @@ class Trip(SQLModel, table=True):
     description: Optional[str] = None
     created_at: Optional[datetime.datetime] = None
     status: TripStatus = Field(default=TripStatus.planned)
-
+    
     initiator: Optional[Account] = Relationship(back_populates="trips")
     companions: List["Companion"] = Relationship(back_populates="trip")
     messages: List["Message"] = Relationship(back_populates="trip")
@@ -108,3 +108,36 @@ class Itinerary(SQLModel, table=True):
     created_at: datetime.datetime
 
     trip: Trip = Relationship(back_populates="itineraries")
+
+
+class AccountPublic(BaseModel):
+    id: Optional[int]
+    username: str
+    first_name: str
+    last_name: str
+    email: EmailStr
+    description: Optional[str] = None
+    role: AccountType
+
+    class Config:
+        from_attributes = True
+
+
+class CompanionPublic(BaseModel):
+    id: Optional[int]
+    first_name: str
+    last_name: str
+    status: CompanionStatus
+    created_at: datetime.datetime
+
+
+class TripWithCompanions(BaseModel):
+    id: Optional[int]
+    initiator: Optional[AccountPublic]
+    start_date: Optional[datetime.datetime] = None
+    end_date: Optional[datetime.datetime] = None
+    vehicle: Optional[VehicleType] = None
+    description: Optional[str] = None
+    created_at: Optional[datetime.datetime] = None
+    status: TripStatus = TripStatus.planned
+    companions: list[CompanionPublic] = []
