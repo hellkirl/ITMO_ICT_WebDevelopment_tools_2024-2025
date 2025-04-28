@@ -1,35 +1,35 @@
 import threading
 import time
 
-class SumThread(threading.Thread):
-    def __init__(self, numbers: list[int]):
-        super().__init__()
-        self.numbers = numbers
-        self.result = 0
 
-    def run(self):
-        self.result = sum(self.numbers)
-
-def calculate_sum(data: list[int], num_threads: int) -> int:
-    chunk_size = len(data) // num_threads
-    threads = []
-    for i in range(num_threads):
-        start = i * chunk_size
-        end = (i+1) * chunk_size if i < num_threads - 1 else len(data)
-        thread = SumThread(data[start:end])
-        threads.append(thread)
-        thread.start()
-    
+def calculate_sum(start: int, end: int) -> int:
     total = 0
-    for thread in threads:
-        thread.join()
-        total += thread.result
+    for i in range(start, end + 1):
+        total += i
     return total
 
+def worker(start: int, end: int, result_list: list, index: int):
+    result_list[index] = calculate_sum(start, end)
+
 if __name__ == "__main__":
-    data = list(range(1, 10_000_000_000_000))
+    N = 10_000_000_000_000
     num_threads = 4
-    start_time = time.perf_counter()
-    total = calculate_sum(data, num_threads)
-    end_time = time.perf_counter()
-    print(f"Threading -> Sum: {total} in {end_time - start_time:.4f} seconds")
+    chunk = N // num_threads
+
+    results = [0] * num_threads
+    threads = []
+
+    t0 = time.perf_counter()
+    for i in range(num_threads):
+        s = i * chunk + 1
+        e = (i + 1) * chunk if i < num_threads - 1 else N
+        th = threading.Thread(target=worker, args=(s, e, results, i))
+        th.start()
+        threads.append(th)
+
+    for th in threads:
+        th.join()
+    total_sum = sum(results)
+    t1 = time.perf_counter()
+
+    print(f"Threading: sum = {total_sum}, time = {t1 - t0:.2f} s")
