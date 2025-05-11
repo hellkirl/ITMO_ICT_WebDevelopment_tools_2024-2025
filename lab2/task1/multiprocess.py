@@ -3,10 +3,7 @@ import time
 
 
 def calculate_sum(start: int, end: int) -> int:
-    total = 0
-    for i in range(start, end + 1):
-        total += i
-    return total
+    return (end - start + 1) * (start + end) // 2
 
 def worker(args):
     return calculate_sum(*args)
@@ -28,4 +25,4 @@ if __name__ == "__main__":
     total_sum = sum(results)
     t1 = time.perf_counter()
 
-    print(f"Multiprocessing: sum = {total_sum}, time = {t1 - t0:.2f} s")
+    print(f"Multiprocessing: sum = {total_sum}, time = {t1 - t0:.6f} s")

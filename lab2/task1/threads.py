@@ -3,10 +3,7 @@ import time
 
 
 def calculate_sum(start: int, end: int) -> int:
-    total = 0
-    for i in range(start, end + 1):
-        total += i
-    return total
+    return (end - start + 1) * (start + end) // 2
 
 def worker(start: int, end: int, result_list: list, index: int):
     result_list[index] = calculate_sum(start, end)
@@ -32,4 +29,4 @@ if __name__ == "__main__":
     total_sum = sum(results)
     t1 = time.perf_counter()
 
-    print(f"Threading: sum = {total_sum}, time = {t1 - t0:.2f} s")
+    print(f"Threading: sum = {total_sum}, time = {t1 - t0:.6f} s")
